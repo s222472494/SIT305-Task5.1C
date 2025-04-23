@@ -1,0 +1,45 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Youtube URL"
+        android:inputType="textUri"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"/>
+
+
+    <Button
+        android:id="@+id/btnPlay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Play URL"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnAddToPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add to Playlist"
+        android:layout_marginBottom="12dp"/>
+
+    <Button
+        android:id="@+id/btnViewPlaylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Playlist"
+        android:layout_marginBottom="12dp"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+</LinearLayout>
+

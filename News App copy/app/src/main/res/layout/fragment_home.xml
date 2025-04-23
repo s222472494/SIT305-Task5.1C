@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/top_stories_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top Stories"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp" />
+
+        <!-- FrameLayout to contain RecyclerView and Buttons -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Left Arrow Button -->
+            <ImageButton
+                android:id="@+id/btn_left"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:contentDescription="Left Scroll Button"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="8dp" />
+
+            <!-- RecyclerView for Top Stories -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_top_stories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:overScrollMode="never"
+                android:clipToPadding="false"
+                android:layout_gravity="center"/>
+
+            <!-- Right Arrow Button -->
+            <ImageButton
+                android:id="@+id/btn_right"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@android:drawable/ic_media_next"
+                android:contentDescription="Right Scroll Button"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="8dp" />
+        </FrameLayout>
+
+        <!-- Spacer for layout -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="16dp" />
+
+        <TextView
+            android:text="News"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_news"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:nestedScrollingEnabled="false" />
+
+        <Button
+            android:id="@+id/btn_itube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to iTube"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp" />
+
+    </LinearLayout>
+</ScrollView>
